@@ -1,5 +1,3 @@
-import { verify } from "cypress/types/sinon";
-
 export default class BasePage {
     static pause(ms) {
         cy.wait(ms);
