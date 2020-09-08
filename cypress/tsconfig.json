@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
+        "target": "ES5",
+        "lib": ["ES5", "DOM"],
         "allowJs": true,
         "baseUrl": "../node_modules",
-        "types": [
-            "cypress"
-        ]
+        "types": [ 
+            "cypress",
+            "node"]
     },
     "include": [
-        "**/*.*"
+        "**/*.ts"
     ]
 }

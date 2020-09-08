@@ -1,3 +1,5 @@
+/// <reference types="../../../support" />
+
 import BasePage from "../pages/BasePage";
 
 export default class LoginPage extends BasePage {

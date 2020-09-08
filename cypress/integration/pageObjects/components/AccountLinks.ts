@@ -19,7 +19,7 @@ export default class AccountLinks {
         cy.get("#money_map_tab").click();
     }
 
-    static clickMoneyApp() {
+    static clickOnlineStatements() {
         cy.get("#online_statements_tab").click();
     }
 }

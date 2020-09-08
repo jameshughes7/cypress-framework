@@ -1,3 +1,5 @@
+/// <reference types="../../../support" />
+
 const zeroBrandIcon = ".brand";
 const searchInput = "#searchTerm";
 const signInButton = "#signin_button";
