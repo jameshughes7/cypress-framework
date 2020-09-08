@@ -12,5 +12,6 @@
   "responseTimeout": 15000,
   "video": true,
   "failOnStatusCode": false,
-  "projectId": "9461uk"
+  "projectId": "9461uk",
+  "testFiles": "**/*.{feature,features}"
 }
