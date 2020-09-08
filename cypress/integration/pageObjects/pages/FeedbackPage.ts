@@ -9,7 +9,7 @@ const sendMessageButton = "input[name='submit']";
 import BasePage from "../pages/BasePage";
 
 export default class FeedbackPage extends BasePage {
-    static visit() {
+    static visitFeedbackPage() {
         cy.visit(url);
     }
 

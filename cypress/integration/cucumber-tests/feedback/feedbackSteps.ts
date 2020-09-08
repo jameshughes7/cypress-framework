@@ -3,7 +3,7 @@ import FeedbackPage from '../../pageObjects/pages/FeedbackPage';
 import HomePage from '../../pageObjects/pages/HomePage';
 
 Given("I open feedback Form", () => {
-    HomePage.navigateToFeedbackPage();
+    FeedbackPage.visitFeedbackPage();
 })
 
 Given("I navigate to feedback Form", () => {
