@@ -13,5 +13,11 @@
   "video": true,
   "failOnStatusCode": false,
   "projectId": "9461uk",
-  "testFiles": "**/*.{feature,features}"
+  "testFiles": "**/*.{feature,features}",
+  "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 }

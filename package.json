@@ -4,10 +4,14 @@
   "description": "Automation framework with Cypress",
   "main": "index.ts",
   "scripts": {
+    "clean:reports": "rm -rf mochawesome-report",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-tests-report.json",
+    "create:html:report": "marge --reportDir TestReport cypress-tests-report.json",
+    "generate:html:report": "npm run merge:reports && npm run create:html:report",
     "cy:open": "cypress open",
-    "cy:run:chrome": "cypress run --browser chrome",
-    "cy:run:firefox": "cypress run --browser firefox",
-    "cy:run:electron": "cypress run --browser electron",
+    "cy:run:chrome": "npm run clean:reports && cypress run --browser chrome",
+    "cy:run:firefox": "npm run clean:reports && cypress run --browser firefox",
+    "cy:run:electron": "npm run clean:reports && cypress run --browser electron",
     "cy:update-snapshots": "cypress run --env updateSnapshots=true",
     "cy:run-dashboard": "cypress run --record --key 97fac7f0-aa35-451f-94fe-82d22e54d2a3"
   },
@@ -26,6 +30,10 @@
     "cypress": "^5.1.0",
     "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-image-snapshot": "^3.1.1",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
     "prettier": "^2.1.1",
     "tsify": "^5.0.2",
     "typescript": "^4.0.2"
