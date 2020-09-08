@@ -5,9 +5,11 @@ Feature: Login to Application
     As a valid user
     I want to login to Application
 
-    @focus
+    Background:
+        Given I open the HomePage
+
     Scenario: Invalid login
-        Given I open login page
+        Given I navigate to login page
         And I wait for 2000 milliseconds
         And I see "Zero - Log in" in the title
         And I see "webappsecurity" in the url
@@ -18,10 +20,16 @@ Feature: Login to Application
         And I reload the browser
         Then I should see error message
     
-    @focus
+    
     Scenario: Valid login
-        Given I open login page
+        Given I navigate to login page
         When I fill username with "username"
         And I fill password with "password"
         And I click on submit login
         Then I should see homepage
+    
+    
+    Scenario: Logout
+        Given I have logged in
+        When I Logout
+        Then I should see the signIn button activated

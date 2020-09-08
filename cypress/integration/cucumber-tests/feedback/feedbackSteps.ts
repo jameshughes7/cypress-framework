@@ -1,9 +1,14 @@
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
-import FeedbackPage from './feedbackPage';
+import FeedbackPage from '../../pageObjects/pages/FeedbackPage';
+import HomePage from '../../pageObjects/pages/HomePage';
 
 Given("I open feedback Form", () => {
-    FeedbackPage.visit();
-}) 
+    HomePage.navigateToFeedbackPage();
+})
+
+Given("I navigate to feedback Form", () => {
+    HomePage.navigateToFeedbackPage();
+})
         
 When("I fill in feedback Form", () => {
     FeedbackPage.fillInFeedbackForm();
