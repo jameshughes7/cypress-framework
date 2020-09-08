@@ -6,7 +6,7 @@
 * [Run](#run)
 * [Test-Reporting](#test-reporting)
 
-### Build-framework
+### Build
 
 * `npm install`
 
