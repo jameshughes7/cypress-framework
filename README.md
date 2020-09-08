@@ -2,15 +2,15 @@
 
 ## Contents
 
-* [Build](#build-framework)
-* [Run](#run-cypress-framework)
-* [Test Reporting](#test-reporting)
+* [Build](#build)
+* [Run](#run)
+* [Test-Reporting](#test-reporting)
 
-### Build
+### Build-framework
 
 * `npm install`
 
-### Run Cypress framework
+### Run
 
 There are various options for running the cypress framework using the Cypress Test Runner:
 
@@ -25,7 +25,7 @@ There are various options for running the cypress framework using the Cypress Te
 * Build and run inside Docker container
   * `cy:run-docker`
 
-### Test Reporting
+### Test-Reporting
 
 * Run one of the headless scripts e.g. `npm run cy:run:electron`
 * Run `generate:html:report && open TestReport/cypress-tests-report.html`
