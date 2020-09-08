@@ -1,17 +1,17 @@
 /// <reference types="../../../support" />
 
-const url = "http://zero.webappsecurity.com/login.html";
 const usernameInput = "#user_login";
 const passwordInput = "#user_password";
 const submitButton = "input[name='submit']";
 const errorMessage = ".alert-error";
 
 import BasePage from "../pages/BasePage";
+import { url } from "../../../../config";
 
 export default class LoginPage extends BasePage {
 
     static visitLoginPage() {
-        cy.visit(url);
+        cy.visit(`${url}/login.html`);
     }
 
     static fillUserName(name) {

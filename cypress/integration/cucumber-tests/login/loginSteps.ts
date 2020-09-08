@@ -5,10 +5,6 @@ import NavBar from '../../pageObjects/components/NavBar';
 
 Given("I open login page", () => {
     LoginPage.visitLoginPage();
-}) 
-
-Given("I navigate to login page", () => {
-    HomePage.navigateToLoginPage();
 })
 
 When("I fill username with {string}", username => {

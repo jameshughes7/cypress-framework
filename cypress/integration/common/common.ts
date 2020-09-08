@@ -7,6 +7,10 @@ defineStep("I open the HomePage", () => {
     cy.visit(url);
 })
 
+defineStep("I navigate to {string} page", (page) => {
+    cy.visit(`${url}/${page}.html`);
+})
+
 defineStep('I wait for {int} milliseconds', time => {
     cy.wait(time);
 });

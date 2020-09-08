@@ -9,7 +9,7 @@ Feature: Login to Application
         Given I open the HomePage
 
     Scenario: Invalid login
-        Given I navigate to login page
+        Given I navigate to "login" page
         And I wait for 2000 milliseconds
         And I see "Zero - Log in" in the title
         And I see "webappsecurity" in the url
@@ -22,7 +22,7 @@ Feature: Login to Application
     
     
     Scenario: Valid login
-        Given I navigate to login page
+        Given I navigate to "login" page
         When I fill username with "username"
         And I fill password with "password"
         And I click on submit login

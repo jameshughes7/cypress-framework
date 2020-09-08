@@ -1,29 +1,25 @@
 /// <reference types="cypress" />
 
-const url = "http://zero.webappsecurity.com/feedback.html";
 const nameInput = "#name";
 const emailInput = "#email";
 const subjectSelector = "#subject";
 const commentInput = "#comment";
 const sendMessageButton = "input[name='submit']";
 import BasePage from "../pages/BasePage";
+import { url } from "../../../../config";
 
 export default class FeedbackPage extends BasePage {
+    
     static visitFeedbackPage() {
-        cy.visit(url);
+        cy.visit(`${url}/feedback.html`);
     }
 
     static fillInFeedbackForm() {
         cy.fixture("feedback").then(data => {
-            const name = data.name;
-            const email = data.email;
-            const subject = data.subject;
-            const message = data.message;
-        
-            cy.get(nameInput).type(name);
-        cy.get(emailInput).type(email);
-        cy.get(subjectSelector).type(subject);
-        cy.get(commentInput).type(message);
+            cy.get(nameInput).type(data.name);
+            cy.get(emailInput).type(data.email);
+            cy.get(subjectSelector).type(data.subject);
+            cy.get(commentInput).type(data.message);
         })
     }
 
