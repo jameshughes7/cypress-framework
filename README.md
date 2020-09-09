@@ -9,7 +9,7 @@
 
 ### Summary
 
-This test framework has been built using [Cypress](https://www.cypress.io/). It has been configured to use Typescript for type safety so that it can be built out and extended for larger, future Cypress projects. It also leverages the [cypress-cucumber-preprocessor](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor#with-out-of-the-box-support) to facilitate the use Gherkin feature files. The framework also utilises the Cypress Dashboard Service and Visual Testing but both are a work in progress.
+This test framework has been built using [Cypress](https://www.cypress.io/). It has been configured to use Typescript for type safety so that it can be built out and extended for larger, future Cypress projects. It also leverages the [cypress-cucumber-preprocessor](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor#with-out-of-the-box-support) to facilitate the use Gherkin feature files. By means of example, it targets a the Test Banking website [Zero Bank](http://zero.webappsecurity.com). The framework also utilises the Cypress Dashboard Service and Visual Testing but both are a work in progress.
 
 ### Build
 

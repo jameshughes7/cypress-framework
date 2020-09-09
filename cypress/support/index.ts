@@ -24,3 +24,5 @@ Cypress.Commands.add("login", (username, password) => {
     cy.get("#user_remember_me").click();
     cy.contains("Sign in").click();
 })
+
+require('cypress-failed-log');

@@ -1,0 +1,32 @@
+{
+  "specName": "feedback.feature",
+  "title": "Submit Feedback Form",
+  "suiteName": "Send Feedback",
+  "testId": "r3",
+  "testName": "Send Feedback Submit Feedback Form",
+  "testError": "Timed out retrying: expected 'http://zero.webappsecurity.com/sendFeedback.html' to include '/blahblah.html'",
+  "testCommands": [
+    "step **I open the HomePage**",
+    "visit http://zero.webappsecurity.com",
+    "step **I navigate to \"feedback\" page**",
+    "visit http://zero.webappsecurity.com/feedback.html",
+    "step **I fill in feedback Form**",
+    "get #name",
+    "type James Hughes, {animationdistancethreshold: 20}",
+    "get #email",
+    "type myname@email.com, {animationdistancethreshold: 20}",
+    "get #subject",
+    "type My special subject, {animationdistancethreshold: 20}",
+    "get #comment",
+    "type This is a message from the feeback.json fixture!, {animationdistancethreshold: 20}",
+    "step **I click on send button**",
+    "get input[name='submit']",
+    "click {animationdistancethreshold: 20}",
+    "form sub --submitting form--",
+    "page load --waiting for new page to load--",
+    "new url http://zero.webappsecurity.com/sendFeedback.html",
+    "step **I see \"/blahblah.html\" in the url**",
+    "url ",
+    "assert expected **http://zero.webappsecurity.com/sendFeedback.html** to include **/blahblah.html**"
+  ]
+}

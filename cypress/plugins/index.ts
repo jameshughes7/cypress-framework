@@ -15,4 +15,7 @@ module.exports = (on, config) => {
   };
 
   on('file:preprocessor', cucumber(options));
+  on('task', {
+    failed: require('cypress-failed-log/src/failed')(),
+  })
 };

@@ -10,4 +10,4 @@ Feature: Send Feedback
         Given I navigate to "feedback" page
         When I fill in feedback Form
         And I click on send button
-        Then I see "/sendFeedback.html" in the url
+        Then I see "/blahblah.html" in the url
